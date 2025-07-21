@@ -1,0 +1,29 @@
+.container {
+	
+	padding-bottom: 32px;
+	border-bottom: 1px solid #cbcbcb;
+
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.imageWrapper {
+
+	text-align: center;
+}
+
+.image {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+.figcaption {
+	font-style: italic;
+}
+
+.attractionsList li {
+	margin-bottom: 16px;
+}

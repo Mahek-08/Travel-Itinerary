@@ -1,0 +1,27 @@
+{
+  "name": "voyaiger",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@reduxjs/toolkit": "^2.4.0",
+    "axios": "^1.8.2",
+    "motion": "^11.14.4",
+    "next": "15.2.3",
+    "pigeon-maps": "^0.21.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.1.2"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3"
+  }
+}

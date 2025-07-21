@@ -1,0 +1,274 @@
+:root {
+  --color-font: #294457;
+  --color-secondary-font: #1a1320;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e0e0e0;
+  font-family: var(--font-varta);
+  color: var(--color-font);
+
+  font-size: 1rem;
+
+  @media screen and (min-width: 640px) {
+		font-size: 1.125rem;
+	}
+
+  @media screen and (min-width: 1536px) {
+		font-size: 1.438rem;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-mohave);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,ol {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+select {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+/* UTILITY CLASSES */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.gap-xs {
+  gap: 8px;
+}
+
+.gap-s {
+  gap: 16px;
+}
+
+.gap-m {
+  gap: 24px;
+}
+
+.gap-l {
+  gap: 32px;
+}
+
+.row.align-center,
+.column.align-center {
+  align-items: center;
+}
+
+.row.justify-center,
+.column.justify-center {
+  justify-content: center;
+}
+
+.row.space-between,
+.column.space-between {
+  justify-content: space-between;
+}
+
+.row.flex-wrap,
+.column.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.container {
+
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3.5rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+
+  @media screen and (min-width: 640px) {
+		gap: 2rem;
+	}
+
+	@media screen and (min-width: 1024px) {
+		gap: 3rem;
+	}
+
+  @media screen and (min-width: 1536px) {
+		gap: 5rem;
+	}
+}
+
+.primaryButton {
+
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 14px;
+  font-weight: 700;
+
+  border-radius: 8px;
+  background: #e0e0e0;
+  color: var(--color-secondary-font);
+  background: linear-gradient(145deg, #ebebeb, #cacaca);
+  box-shadow:  8px 8px 16px #bababa,
+              -8px -8px 16px #f8f8f88c;
+
+  position: relative;
+
+  font-size: inherit;
+  font-family: inherit;
+
+  &::before {
+
+    content: "";
+    position: absolute;
+    border-radius: 8px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    opacity: 0;
+    transition: opacity 250ms easeInOut;
+
+    background: white;
+  }
+
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.7;
+  }
+
+  &:hover {
+    background: #cfe6f1;
+    box-shadow: inset 8px 8px 16px #b2c6cf,
+                inset -8px -8px 16px #ecffff;
+  }
+
+  &:active::before {
+    opacity: 1;
+    background: #e0e0e0;
+    background: linear-gradient(145deg, #c3d5de, #e9f6fb);
+    box-shadow: 8px 8px 16px #adb5b9, -8px -8px 16px #e8e8e8;
+  }
+}
+
+.highlightButton {
+
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 14px;
+    font-weight: 700;
+  
+    border-radius: 8px;
+    background: #e0e0e0;
+    color: var(--color-secondary-font);
+    background: #cfe6f1;
+    box-shadow: inset 8px 8px 16px #b2c6cf,
+                inset -8px -8px 16px #ecffff;
+  
+    position: relative;
+  
+    font-size: inherit;
+    font-family: inherit;
+
+  
+    &:disabled {
+      cursor: default;
+      opacity: 0.7;
+    }
+}
+
+/* Typography */
+.text-display {
+
+  font-family: var(--font-mohave);
+  font-size: 1.5rem;
+
+  @media screen and (min-width: 640px) {
+		font-size: 2.8rem;
+	}
+
+	@media screen and (min-width: 1024px) {
+		font-size: 4rem;
+	}
+
+  @media screen and (min-width: 1536px) {
+		font-size: 6rem;
+	}
+}
+
+.text-section-heading {
+
+  font-family: var(--font-mohave);
+  font-size: 1.2rem;
+
+  @media screen and (min-width: 640px) {
+		font-size: 1.5rem;
+	}
+
+	@media screen and (min-width: 1024px) {
+		font-size: 2rem;
+	}
+
+  @media screen and (min-width: 1536px) {
+		font-size: 2.2rem;
+	}
+}
+
+.text-small-heading {
+
+  font-family: var(--font-mohave);
+  font-size: 1rem;
+
+  @media screen and (min-width: 640px) {
+		font-size: 1.2rem;
+	}
+
+	@media screen and (min-width: 1024px) {
+		font-size: 1.4rem;
+	}
+
+  @media screen and (min-width: 1536px) {
+		font-size: 1.8rem;
+	}
+}
+
+.text-label {
+  font-size: 0.8rem;
+  color: var(--color-secondary-font);
+
+  @media screen and (min-width: 640px) {
+		font-size: 0.9rem;
+	}
+}

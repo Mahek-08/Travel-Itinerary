@@ -1,0 +1,88 @@
+/* From Uiverse.io by shreyasm-dev */ 
+/* Hide the default checkbox */
+
+.iconCheckbox {
+
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.iconCheckbox svg {
+	flex-shrink: 0;
+	width: 32px;
+	height: 32px;
+	fill: #9f9f9f;
+}
+
+.iconCheckboxChecked {
+
+	composes: iconCheckbox;
+}
+
+.iconCheckboxChecked svg {
+	fill: #4b30ac;
+}
+
+.checkboxContainer {
+	
+	display: block;
+	position: relative;
+	cursor: pointer;
+	width: fit-content;
+	-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+
+	& input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+
+		&:checked ~ .checkmark {
+			box-shadow: inset 4px 4px 7px #bababa,
+			-4px -4px 7px #eee;
+			-webkit-box-shadow: inset 4px 4px 7px #bababa,
+			-4px -4px 7px #eee;
+		}
+	}
+}
+
+/* Create a custom checkbox */
+.checkmark {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 1.3em;
+	width: 1.3em;
+	border-radius: 150px;
+	background: #e0e0e0;
+	box-shadow:  4px 4px 7px #bababa,
+				-4px -4px 7px #eee;
+}
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	opacity: 0;
+	transition: opacity 200ms linear;
+}
+
+.checkboxContainer input:checked ~ .checkmark:after {
+	opacity: 1;
+}
+
+.checkboxContainer .checkmark:after {
+	left: 0.45em;
+	top: 0.25em;
+	width: 0.25em;
+	height: 0.5em;
+	border: solid darkgray;
+	border-width: 0 0.15em 0.15em 0;
+	-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+}

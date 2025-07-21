@@ -1,0 +1,24 @@
+.generationSection {
+
+	width: 100%;
+	padding: 50px 0;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+
+	background-image: url("../../../assets/images/pattern.png");
+	background-repeat: no-repeat;
+	gap: 3.5rem;
+
+	@media screen and (min-width: 1024px) {
+		gap: 4.5rem;
+	}
+}
+
+.errorMessage {
+	font-size: 14px;
+	text-align: center;
+	margin: 0 auto;
+}
